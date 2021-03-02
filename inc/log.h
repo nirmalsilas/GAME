@@ -20,15 +20,6 @@ namespace game
 
 	static string LOGSTRING[4] = { "DEBUG","INFO","WARNING","ERROR" };
 
-	/*class logbase
-	{
-		
-	logbase() {}
-
-	public:
-		int logLevel;
-	};
-	*/
 	class log 
 	{
 	private:

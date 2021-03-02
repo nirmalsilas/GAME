@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<record>
+		<name>APJ</ModuleName>
+		<quote>DREAM DREAM DREAM</quote>
+	</record>
+	<record>
+		<name>MK GANDHI</ModuleName>
+		<quote>MY LIFE IS MY MESSAGE</quote>
+	</record>
+	<record>
+		<name>MARTIN LUTHER</ModuleName>
+		<quote>I HAVE A DREAM</quote>
+	</record>
+	<record>
+		<name>C S LEWIS</ModuleName>
+		<quote>PAIN IS THE MEGAPHONE OF GOD</quote>
+	</record>
+	<record>
+		<name>JEAN PAUL</ModuleName>
+		<quote>HELL IS OTHER PEOPLE</quote>
+	</record>
+	
+</data-set>

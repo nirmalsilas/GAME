@@ -10,7 +10,7 @@ using namespace game;
 
 
 #define Interface_ Interface::get()
-
+#define PASS_MARK 10
 
 
 int main()
@@ -29,7 +29,7 @@ int main()
 		auto retVal =  itr.validation();
 		if (retVal != ErrCode::ERR_SUCESS)
 		{
-			LOG_ERROR<<"Authentication Failure for userName :$$$$\n";
+			LOG_ERROR<<"Authentication Failure for userName :"<<itr.username<<"\n";
 			return 0;
 		}
 		LOG_INFO<<"authentication Successfull\n";
@@ -42,12 +42,24 @@ int main()
 		LOG_ERROR << "FILE OPEN/getting record failed \n";
 	}
 
-	
+	//Interface_.print_recordList();
 
-	//create a data base for questions and answers 
-	//populate one by one 
-	//score calculation and pass /fail
-	//wite logs to a file
+	//create a data base for questions and answers [done]
+	//populate one by one   [done]
+	//score calculation and pass /fail [done]
+	//wite logs to a file [done]
+	for (player player_ : usersList)
+	{
+		Interface_.query(player_.mark_);
+
+		player_.printScoreCard([&](int total) {
+			if (total > PASS_MARK)
+				player_.result("PASSED");
+			else
+				player_.result("FAILED"); });
+	}
+
+	cin.get();
 
 
 

@@ -49,3 +49,43 @@ cred game::Interface::get_credentials()
 	 return retValue;
 
  }
+
+ void Interface::print_recordList()
+ {
+
+	 for (game::Record rcd_ : RecordLIst)
+	 {
+		 LOG_INFO << "Name: " << rcd_.name << "\n";
+		 LOG_INFO << "Quote: " << rcd_.quote << "\n";
+	 }
+
+ }
+ void Interface::query(mark& tmpMark)
+ {
+	 LOG_INFO << "INITIALIZING QUESTIONS\n";
+	 LOG_INFO << "FIND WHO'S WORDS IT IS ..??\n";
+	 
+	 std::string answer;
+	 cin.get();
+	 for (game::Record rcd_ : RecordLIst)
+	 {
+		 LOG_INFO << "..............................\n";
+		 LOG_INFO << "Quote: " << rcd_.quote << "\n";
+		 LOG_INFO << "WRITE YOUR ANSWER :\n";
+		// cin.get();
+		 getline(cin, answer);
+
+		 if (answer == rcd_.name)
+		 {
+			 LOG_INFO << "RIGHT ANSWER\n";
+			 tmpMark.total_score +=  5;
+			 tmpMark.correct_answ++;
+		 }
+		 else
+		 {
+			 LOG_ERROR << "WRONG ANSWER\n";
+			 tmpMark.wrong_answ++;
+		 }
+		 answer.clear();
+	 }
+ }

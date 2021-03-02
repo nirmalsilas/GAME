@@ -2,6 +2,7 @@
 #include<iostream>
 #include<string>
 #include<sstream>
+#include"../inc/base.h"
 
 using namespace std;
 namespace game
@@ -56,7 +57,7 @@ namespace game
 			return instance_;
 		}
 
-
+		void writeToFile(const std::string& );
 		template<typename type>
 		log& operator<<(type data)
 		{

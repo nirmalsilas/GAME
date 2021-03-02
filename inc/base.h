@@ -22,4 +22,12 @@ namespace game {
     };
 
     #define FILE_PATH "C:\/c++\/GAME_ENGINE_01\/record.xml"
+
+    struct mark
+    {
+        int correct_answ;
+        int wrong_answ;
+        int total_score;
+        mark() :correct_answ(0), wrong_answ(0), total_score(0) {}
+    };
 }

@@ -16,6 +16,9 @@ namespace game{
 		cred get_credentials();
 		static Interface& get();
 		ErrCode get_record(std::string fileName);
+		void print_recordList();
+		void query(mark&);
+		
 	
 	};
 }
